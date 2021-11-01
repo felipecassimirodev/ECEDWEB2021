@@ -1,19 +1,20 @@
 ﻿@model ECEDWEB.Models.Aluno
 
 @{
-    ViewData["Title"] = "CriarAluno";
+    ViewData["Title"] = "AtualizarAluno";
 }
 
-<h1>CriarAluno</h1>
+<h1>AtualizarAluno</h1>
 
 <h4>Aluno</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CriarAluno">
+        <form asp-action="AtualizarAluno">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idAluno" />
             <div class="form-group">
-                <label asp-for="NomeAluno" class="control-label"> Nome do aluno   </label>
+                <label asp-for="NomeAluno" class="control-label"></label>
                 <input asp-for="NomeAluno" class="form-control" />
                 <span asp-validation-for="NomeAluno" class="text-danger"></span>
             </div>
@@ -23,12 +24,12 @@
                 <span asp-validation-for="Sexo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NomeMae" class="control-label">Nome da Mae</label>
+                <label asp-for="NomeMae" class="control-label"></label>
                 <input asp-for="NomeMae" class="form-control" />
                 <span asp-validation-for="NomeMae" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NomePai" class="control-label">Nome do Pai</label>
+                <label asp-for="NomePai" class="control-label"></label>
                 <input asp-for="NomePai" class="form-control" />
                 <span asp-validation-for="NomePai" class="text-danger"></span>
             </div>
@@ -38,7 +39,7 @@
                 <span asp-validation-for="Responsavel" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TelefoneMae" class="control-label">Telefone da Mae</label>
+                <label asp-for="TelefoneMae" class="control-label"></label>
                 <input asp-for="TelefoneMae" class="form-control" />
                 <span asp-validation-for="TelefoneMae" class="text-danger"></span>
             </div>
@@ -78,7 +79,7 @@
                 <span asp-validation-for="Tipo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
